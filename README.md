@@ -66,24 +66,10 @@ and a first test with two fresh agents.
 
 ## How it works
 
-```mermaid
-flowchart LR
-  A[("Lean artifact<br/>pinned commit")] --> C["census<br/>modules · declarations · cone"]
-  C --> U["units<br/>the chapters"]
-  subgraph R["Reader · Codex"]
-    U --> D["dossier per unit<br/>statements in words"]
-    D --> P["structured proofs<br/>steps quoting Lean lines"]
-  end
-  P --> K{{"program check<br/>quotations · coverage · grain · signatures"}}
-  subgraph W["Writer · Claude Code"]
-    K --> N["notes<br/>typeset, complete, concordance"]
-    N --> B["book<br/>summary and chapters"]
-  end
-  K --> M["map and reading site<br/>grey where not read"]
-  N --> M
-  N -.->|round trip| F["Lean again,<br/>from the note alone"]
-  F -.->|compared in Lean| A
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/how-it-works-dark.png">
+  <img src="docs/how-it-works.png" width="100%" alt="How Readback works. The reader (Codex) turns the Lean artifact, after a census, into units, dossiers and structured proofs whose steps quote at most 8 Lean lines. Through the mailbox the writer (Claude Code) receives them; rb.py check verifies quotations, coverage and signatures, and sends a failing dossier back to the reader. The writer writes a typeset note with a concordance; rb.py note checks the signature gate, notation and citations, and tests the gate on broken copies. The results are a map and status, a reading site and a book. A dashed round trip goes from the note back to Lean: a fresh session writes Lean from the note alone and Lean compares it with the archive.">
+</picture>
 
 Readback never goes from Lean straight to prose. Between the two stands a **structured proof**:
 
