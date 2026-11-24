@@ -1,0 +1,6 @@
+#!/bin/sh
+# Start the writing agent (Claude Code) of a Readback workspace: finds the workspace from where you are (or makes it for the Lean
+# sources in ./src), then starts the client with its model, its effort and its first prompt.
+#     readback-claude [FOLDER] [--print] [--root MODULE] [--model M] [--effort E]
+# `make install` puts this command on your PATH. All options: python3 rb.py start --help
+exec python3 "$(cd "$(dirname "$0")" && pwd)/rb.py" start writer "$@"

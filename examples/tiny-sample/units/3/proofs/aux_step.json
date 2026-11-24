@@ -1,0 +1,46 @@
+{
+ "schema": "readback/proof/1",
+ "declaration": "Tiny.Gauss:5:17",
+ "summary": "Expand (k+1)(k+2) in two steps; the rest is linear in the product k(k+1).",
+ "steps": [
+  {
+   "id": "1",
+   "parent": null,
+   "kind": "fact",
+   "claim": "(k+1)(k+2) = (k+1)(k+1) + (k+1), by the definition of multiplication by a successor.",
+   "lines": [
+    6,
+    7
+   ],
+   "lean": "  have h1 : (k + 1) * (k + 1 + 1) = (k + 1) * (k + 1) + (k + 1) := by\n    rw [Nat.mul_succ]",
+   "typed_fact": "(k + 1) * (k + 1 + 1) = (k + 1) * (k + 1) + (k + 1)"
+  },
+  {
+   "id": "2",
+   "parent": null,
+   "kind": "fact",
+   "claim": "(k+1)(k+1) = k(k+1) + (k+1), in the same way on the left factor.",
+   "lines": [
+    8,
+    9
+   ],
+   "lean": "  have h2 : (k + 1) * (k + 1) = k * (k + 1) + (k + 1) := by\n    rw [Nat.succ_mul]",
+   "typed_fact": "(k + 1) * (k + 1) = k * (k + 1) + (k + 1)"
+  },
+  {
+   "id": "3",
+   "parent": null,
+   "kind": "deduction",
+   "claim": "Substituting both, the two sides agree as linear expressions in k and in the product k(k+1).",
+   "lines": [
+    10,
+    11
+   ],
+   "lean": "  rw [h1, h2]\n  omega",
+   "uses": [
+    "1",
+    "2"
+   ]
+  }
+ ]
+}

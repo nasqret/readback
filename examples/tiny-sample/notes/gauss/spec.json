@@ -1,0 +1,98 @@
+{
+ "schema": "readback/note/1",
+ "title": "The sum of the first integers",
+ "number": 1,
+ "unit": "3",
+ "declarations": [
+  {
+   "key": "auxStep",
+   "name": "Tiny.aux_step",
+   "id": "Tiny.Gauss:5:17",
+   "binders": {
+    "k": "integer \\m{k\\ge0}"
+   }
+  },
+  {
+   "key": "gauss",
+   "name": "Tiny.two_mul_sumTo_id",
+   "id": "Tiny.Gauss:13:9",
+   "binders": {
+    "n": "integer \\m{n\\ge0}"
+   }
+  },
+  {
+   "key": "tri2",
+   "name": "Tiny.two_mul_tri",
+   "id": "Tiny.Gauss:20:9",
+   "binders": {
+    "n": "integer \\m{n\\ge0}"
+   }
+  },
+  {
+   "key": "sumTo",
+   "name": "Tiny.sumTo",
+   "id": "Tiny.Defs:5:5",
+   "notation": {
+    "macro": "sumTo",
+    "slots": [
+     "f",
+     "Nat"
+    ],
+    "tex": "S_{#1}(#2)",
+    "symbol": "S_"
+   }
+  },
+  {
+   "key": "sumToSucc",
+   "name": "Tiny.sumTo_succ",
+   "id": "Tiny.Basic:5:9",
+   "binders": {
+    "f": "every such $f$",
+    "n": "every integer \\m{n\\ge0}"
+   }
+  },
+  {
+   "key": "tri",
+   "name": "Tiny.tri",
+   "id": "Tiny.Defs:9:5",
+   "notation": {
+    "macro": "tri",
+    "slots": [
+     "n"
+    ],
+    "tex": "T_{#1}",
+    "symbol": "T_"
+   }
+  }
+ ],
+ "quoted": [
+  "gauss",
+  "auxStep"
+ ],
+ "lettered": [
+  [
+   "Theorem A",
+   "t:A"
+  ]
+ ],
+ "outline": [
+  {
+   "id": "identity",
+   "title": "One identity",
+   "about": "k(k+1) + 2(k+1) = (k+1)(k+2)",
+   "keys": [
+    "auxStep"
+   ]
+  },
+  {
+   "id": "sum",
+   "title": "Theorem A",
+   "about": "twice the sum of the integers up to n is n(n+1)",
+   "keys": [
+    "gauss",
+    "tri2"
+   ]
+  }
+ ],
+ "elsewhere": []
+}

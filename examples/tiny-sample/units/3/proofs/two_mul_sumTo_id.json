@@ -1,0 +1,76 @@
+{
+ "schema": "readback/proof/1",
+ "declaration": "Tiny.Gauss:13:9",
+ "summary": "Induction on n.",
+ "steps": [
+  {
+   "id": "1",
+   "parent": null,
+   "kind": "setup",
+   "claim": "Induction on n.",
+   "lines": [
+    14,
+    18
+   ],
+   "lean": "  induction n with\n  | zero => rfl\n  | succ k ih =>\n    rw [sumTo_succ, Nat.mul_add, ih]\n    exact aux_step k",
+   "head_lines": [
+    14,
+    14
+   ]
+  },
+  {
+   "id": "1.1",
+   "parent": "1",
+   "kind": "case",
+   "claim": "For n = 0 both sides are 0.",
+   "lines": [
+    15,
+    15
+   ],
+   "lean": "  | zero => rfl"
+  },
+  {
+   "id": "1.2",
+   "parent": "1",
+   "kind": "case",
+   "claim": "Let n = k+1 and assume the statement for k.",
+   "lines": [
+    16,
+    18
+   ],
+   "lean": "  | succ k ih =>\n    rw [sumTo_succ, Nat.mul_add, ih]\n    exact aux_step k",
+   "head_lines": [
+    16,
+    16
+   ]
+  },
+  {
+   "id": "1.2.1",
+   "parent": "1.2",
+   "kind": "identity",
+   "claim": "The sum up to k+1 is the sum up to k plus k+1; doubling and using the induction hypothesis gives k(k+1) + 2(k+1).",
+   "lines": [
+    17,
+    17
+   ],
+   "lean": "    rw [sumTo_succ, Nat.mul_add, ih]",
+   "uses": [
+    "Tiny.sumTo_succ"
+   ]
+  },
+  {
+   "id": "1.2.2",
+   "parent": "1.2",
+   "kind": "deduction",
+   "claim": "This equals (k+1)(k+2) by the identity for k.",
+   "lines": [
+    18,
+    18
+   ],
+   "lean": "    exact aux_step k",
+   "uses": [
+    "Tiny.aux_step"
+   ]
+  }
+ ]
+}

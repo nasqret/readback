@@ -1,0 +1,94 @@
+{
+ "schema": "readback/unit/1",
+ "unit": "3",
+ "title": "Gauss's sum",
+ "summary": "Twice the sum of the integers from 0 to n is n(n+1), by induction on n; the inductive step is one identity between polynomials in k.",
+ "members": [
+  {
+   "id": "Tiny.Gauss:5:17",
+   "name": "Tiny.aux_step",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    5,
+    11
+   ],
+   "sha256": "217f107677c6f46a045bb2a735916380c4501775889288c4e5fdf65b0ff78ea8",
+   "text": "For every natural number k: k(k+1) + 2(k+1) = (k+1)(k+2).",
+   "binders": [
+    {
+     "name": "k",
+     "kind": "explicit",
+     "type": "Nat",
+     "reads": "a natural number k"
+    }
+   ]
+  },
+  {
+   "id": "Tiny.Gauss:13:9",
+   "name": "Tiny.two_mul_sumTo_id",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    13,
+    18
+   ],
+   "sha256": "828969df619c0156ca2d24cd875ee96706a65a30617db8422d428b6799e0307d",
+   "text": "For every natural number n: 2·(0 + 1 + … + n) = n(n+1).",
+   "binders": [
+    {
+     "name": "n",
+     "kind": "explicit",
+     "type": "Nat",
+     "reads": "a natural number n"
+    }
+   ]
+  },
+  {
+   "id": "Tiny.Gauss:20:9",
+   "name": "Tiny.two_mul_tri",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    20,
+    21
+   ],
+   "sha256": "b3254a91536ef7c1a71283b4f5bd14d5da0847992c2c4bcf96135e936539e3db",
+   "text": "For every natural number n: twice the n-th triangular number is n(n+1).",
+   "triage": "restatement",
+   "binders": [
+    {
+     "name": "n",
+     "kind": "explicit",
+     "type": "Nat",
+     "reads": "a natural number n"
+    }
+   ]
+  }
+ ],
+ "imports": [
+  {
+   "name": "Tiny.sumTo_succ",
+   "file": "Tiny/Basic.lean",
+   "lines": [
+    5,
+    5
+   ],
+   "unit": "2",
+   "lean": "theorem sumTo_succ (f : Nat → Nat) (n : Nat) : sumTo f (n + 1) = sumTo f n + f n := rfl",
+   "text": "The sum of f over 0, …, n is the sum over 0, …, n−1 plus f(n)."
+  },
+  {
+   "name": "Tiny.tri",
+   "file": "Tiny/Defs.lean",
+   "lines": [
+    9,
+    9
+   ],
+   "unit": "1",
+   "lean": "def tri (n : Nat) : Nat := sumTo (fun i => i) (n + 1)",
+   "text": "The n-th triangular number, the sum of the integers from 0 to n."
+  }
+ ],
+ "out_of_scope": []
+}

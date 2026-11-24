@@ -1,0 +1,178 @@
+{
+ "schema": "readback/reader/1",
+ "note": "gauss",
+ "title": "The sum of the first integers",
+ "unit": "3",
+ "commit": "230e028ddb29d6ae05f1be7d4db897f6d1134d86",
+ "pdf": "gauss.pdf",
+ "pdf_sha256": "d299b6f70f38271eaae9456fa7e3a0cb8216241aba94209ed99d00a4acf98d44",
+ "pages": 3,
+ "items": [
+  {
+   "item": "d:sum",
+   "title": "Def. 2.1",
+   "page": 1,
+   "dest": "theorem.2.1",
+   "declarations": [
+    "sumTo",
+    "sumToSucc"
+   ]
+  },
+  {
+   "item": "d:tri",
+   "title": "Def. 2.2",
+   "page": 1,
+   "dest": "theorem.2.2",
+   "declarations": [
+    "tri"
+   ]
+  },
+  {
+   "item": "l:step",
+   "title": "Lemma 3.1",
+   "page": 1,
+   "dest": "theorem.3.1",
+   "declarations": [
+    "auxStep"
+   ]
+  },
+  {
+   "item": "t:A",
+   "title": "Theorem A",
+   "page": 1,
+   "dest": "section*.1",
+   "declarations": [
+    "gauss"
+   ]
+  },
+  {
+   "item": "c:tri",
+   "title": "Cor. 3.2",
+   "page": 2,
+   "dest": "theorem.3.2",
+   "declarations": [
+    "tri2"
+   ]
+  }
+ ],
+ "outline": {
+  "nodes": [
+   {
+    "id": "identity",
+    "title": "One identity",
+    "about": "k(k+1) + 2(k+1) = (k+1)(k+2)",
+    "declarations": [
+     "Tiny.Gauss:5:17"
+    ]
+   },
+   {
+    "id": "sum",
+    "title": "Theorem A",
+    "about": "twice the sum of the integers up to n is n(n+1)",
+    "declarations": [
+     "Tiny.Gauss:13:9",
+     "Tiny.Gauss:20:9"
+    ]
+   }
+  ],
+  "edges": [
+   {
+    "from": "identity",
+    "to": "sum",
+    "uses": 1
+   }
+  ]
+ },
+ "declarations": [
+  {
+   "key": "auxStep",
+   "id": "Tiny.Gauss:5:17",
+   "name": "Tiny.aux_step",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    5,
+    11
+   ],
+   "in_unit": true,
+   "item": "l:step",
+   "where": "Lemma 3.1",
+   "page": 1
+  },
+  {
+   "key": "gauss",
+   "id": "Tiny.Gauss:13:9",
+   "name": "Tiny.two_mul_sumTo_id",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    13,
+    18
+   ],
+   "in_unit": true,
+   "item": "t:A",
+   "where": "Theorem A",
+   "page": 1
+  },
+  {
+   "key": "tri2",
+   "id": "Tiny.Gauss:20:9",
+   "name": "Tiny.two_mul_tri",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    20,
+    21
+   ],
+   "in_unit": true,
+   "item": "c:tri",
+   "where": "Cor. 3.2",
+   "page": 2
+  },
+  {
+   "key": "sumTo",
+   "id": "Tiny.Defs:5:5",
+   "name": "Tiny.sumTo",
+   "kind": "def",
+   "file": "Tiny/Defs.lean",
+   "lines": [
+    5,
+    7
+   ],
+   "in_unit": false,
+   "item": "d:sum",
+   "where": "Def. 2.1",
+   "page": 1
+  },
+  {
+   "key": "sumToSucc",
+   "id": "Tiny.Basic:5:9",
+   "name": "Tiny.sumTo_succ",
+   "kind": "theorem",
+   "file": "Tiny/Basic.lean",
+   "lines": [
+    5,
+    5
+   ],
+   "in_unit": false,
+   "item": "d:sum",
+   "where": "Def. 2.1",
+   "page": 1
+  },
+  {
+   "key": "tri",
+   "id": "Tiny.Defs:9:5",
+   "name": "Tiny.tri",
+   "kind": "def",
+   "file": "Tiny/Defs.lean",
+   "lines": [
+    9,
+    9
+   ],
+   "in_unit": false,
+   "item": "d:tri",
+   "where": "Def. 2.2",
+   "page": 1
+  }
+ ]
+}

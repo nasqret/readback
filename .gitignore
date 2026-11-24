@@ -1,0 +1,9 @@
+.lake/
+lake-manifest.json
+build/
+__pycache__/
+.DS_Store
+*.aux
+*.fls
+*.fdb_latexmk
+*.swp

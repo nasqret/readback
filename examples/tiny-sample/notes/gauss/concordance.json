@@ -1,0 +1,151 @@
+{
+ "schema": "readback/concordance/1",
+ "note": "gauss",
+ "commit": "230e028ddb29d6ae05f1be7d4db897f6d1134d86",
+ "declarations": {
+  "auxStep": {
+   "name": "Tiny.aux_step",
+   "id": "Tiny.Gauss:5:17",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    5,
+    11
+   ],
+   "file_sha256": "d64771fe76aa502438a406001a8ae3ce50e58c66bb0ac7f21913e23e12bf52dd",
+   "statement": "private theorem aux_step (k : Nat) : k * (k + 1) + 2 * (k + 1) = (k + 1) * (k + 1 + 1)",
+   "in_unit": true,
+   "binders": [
+    {
+     "name": "k",
+     "kind": "explicit",
+     "type": "Nat",
+     "from": "signature"
+    }
+   ],
+   "binders_basis": "text"
+  },
+  "gauss": {
+   "name": "Tiny.two_mul_sumTo_id",
+   "id": "Tiny.Gauss:13:9",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    13,
+    18
+   ],
+   "file_sha256": "d64771fe76aa502438a406001a8ae3ce50e58c66bb0ac7f21913e23e12bf52dd",
+   "statement": "theorem two_mul_sumTo_id (n : Nat) : 2 * sumTo (fun i => i) (n + 1) = n * (n + 1)",
+   "in_unit": true,
+   "binders": [
+    {
+     "name": "n",
+     "kind": "explicit",
+     "type": "Nat",
+     "from": "signature"
+    }
+   ],
+   "binders_basis": "text"
+  },
+  "tri2": {
+   "name": "Tiny.two_mul_tri",
+   "id": "Tiny.Gauss:20:9",
+   "kind": "theorem",
+   "file": "Tiny/Gauss.lean",
+   "lines": [
+    20,
+    21
+   ],
+   "file_sha256": "d64771fe76aa502438a406001a8ae3ce50e58c66bb0ac7f21913e23e12bf52dd",
+   "statement": "theorem two_mul_tri (n : Nat) : 2 * tri n = n * (n + 1)",
+   "in_unit": true,
+   "binders": [
+    {
+     "name": "n",
+     "kind": "explicit",
+     "type": "Nat",
+     "from": "signature"
+    }
+   ],
+   "binders_basis": "text"
+  },
+  "sumTo": {
+   "name": "Tiny.sumTo",
+   "id": "Tiny.Defs:5:5",
+   "kind": "def",
+   "file": "Tiny/Defs.lean",
+   "lines": [
+    5,
+    7
+   ],
+   "file_sha256": "a2ee4b2ad12c8639ac7eafcb337ff65045c9771005191bc5e636aa039f7f51e9",
+   "statement": "def sumTo (f : Nat → Nat) : Nat → Nat\n  | 0 => 0\n  | n + 1 => sumTo f n + f n",
+   "in_unit": false,
+   "binders": [
+    {
+     "name": "f",
+     "kind": "explicit",
+     "type": "Nat → Nat",
+     "from": "signature"
+    },
+    {
+     "name": null,
+     "kind": "explicit",
+     "type": "Nat",
+     "from": "type"
+    }
+   ],
+   "binders_basis": "text"
+  },
+  "sumToSucc": {
+   "name": "Tiny.sumTo_succ",
+   "id": "Tiny.Basic:5:9",
+   "kind": "theorem",
+   "file": "Tiny/Basic.lean",
+   "lines": [
+    5,
+    5
+   ],
+   "file_sha256": "e008fe2292ef11d10ddd471b28d91a6b1669d4221202f77043d7b31cd4502522",
+   "statement": "theorem sumTo_succ (f : Nat → Nat) (n : Nat) : sumTo f (n + 1) = sumTo f n + f n",
+   "in_unit": false,
+   "binders": [
+    {
+     "name": "f",
+     "kind": "explicit",
+     "type": "Nat → Nat",
+     "from": "signature"
+    },
+    {
+     "name": "n",
+     "kind": "explicit",
+     "type": "Nat",
+     "from": "signature"
+    }
+   ],
+   "binders_basis": "text"
+  },
+  "tri": {
+   "name": "Tiny.tri",
+   "id": "Tiny.Defs:9:5",
+   "kind": "def",
+   "file": "Tiny/Defs.lean",
+   "lines": [
+    9,
+    9
+   ],
+   "file_sha256": "a2ee4b2ad12c8639ac7eafcb337ff65045c9771005191bc5e636aa039f7f51e9",
+   "statement": "def tri (n : Nat) : Nat := sumTo (fun i => i) (n + 1)",
+   "in_unit": false,
+   "binders": [
+    {
+     "name": "n",
+     "kind": "explicit",
+     "type": "Nat",
+     "from": "signature"
+    }
+   ],
+   "binders_basis": "text"
+  }
+ }
+}
