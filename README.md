@@ -12,19 +12,11 @@ Every sentence is tied to the Lean lines it renders, and a program checks every 
 ![python](https://img.shields.io/badge/python-3.9%2B%20·%20standard%20library-3776ab)
 ![lean](https://img.shields.io/badge/Lean-4-0f172a)
 ![agents](https://img.shields.io/badge/agents-Claude%20Code%20%2B%20Codex-6366f1)
-[![atlas](https://img.shields.io/badge/atlas-riemann--rev-b91c1c)](https://github.com/nasqret/riemann-rev)
 
 [Quick start](#quick-start) · [How it works](#how-it-works) · [What is checked](#what-is-checked) ·
 [Results](#results-on-a-large-artifact) · [Example](#a-worked-example) · [Status](#status) · [Install](INSTALL.md)
 
 </div>
-
-> [!NOTE]
-> **See it on a real case: [riemann-rev](https://github.com/nasqret/riemann-rev)**, the atlas of the Lean archive
-> of the announced proof of the Riemann hypothesis, with its map, guide, blueprint and the notes written with this
-> method ([web site](https://nasqret.github.io/riemann-rev/)).
-
-<p align="center"><a href="https://github.com/nasqret/riemann-rev"><img src="docs/riemann-rev-atlas.png" width="100%" alt="The home page of riemann-rev: the announced proof of the Riemann hypothesis, a map, a guide and a record of checks, beside the computed centred prime sum."></a></p>
 
 > In aviation a pilot *reads back* a clearance and the controller confirms it. Here two agents read a formal
 > proof back into mathematics, a program confirms every tie to the formal text, and the round trip (formalizing
