@@ -31,7 +31,7 @@ declaration.
 
 ## At a glance
 
-| | |
+| | Readback |
 |---|---|
 | **You give** | a Lean 4 project that compiles, and the name of its root module |
 | **You get** | a map of units (chapters) · structured proofs · typeset notes with a concordance · a reading site · a book *(experimental)* · a record of every exchange |
@@ -45,7 +45,7 @@ declaration.
 ```bash
 git clone https://github.com/nasqret/readback && cd readback
 make selftest        # the whole chain on the example, in a temporary directory
-make install         # the skill for Claude Code, and the commands readback-claude and readback-codex
+make install         # the skill, and the commands readback-claude and readback-codex
 ```
 
 Put the Lean sources in a folder `src/`, go to the folder above it, and start the two agents, each in its own
@@ -81,8 +81,8 @@ flowchart LR
   end
   K --> M["map and reading site<br/>grey where not read"]
   N --> M
-  N -. "round trip" .-> F["Lean again,<br/>from the note alone"]
-  F -. "compared in Lean" .-> A
+  N -.->|round trip| F["Lean again,<br/>from the note alone"]
+  F -.->|compared in Lean| A
 ```
 
 Readback never goes from Lean straight to prose. Between the two stands a **structured proof**:
